@@ -1,0 +1,10 @@
+mkdir -p build
+nasm -f elf32 -o build/kernel_asm.o kernel/kernel.asm
+mkdir -p build
+gcc -m32 -ffreestanding -O2 -g -Wall -Wextra -c -o build/kernel.o kernel/kernel.c
+ld -m elf_i386 -T ./linker.ld -o build/kernel.bin build/kernel_asm.o build/kernel.o
+mkdir -p build/iso_root/boot/grub
+cp build/kernel.bin build/iso_root/boot/
+cp ./iso/boot/grub/grub.cfg build/iso_root/boot/grub/
+grub-mkrescue -o mediator.iso build/iso_root
+qemu-system-x86_64 -cdrom mediator.iso

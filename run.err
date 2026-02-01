@@ -1,0 +1,17 @@
+xorriso 1.5.6 : RockRidge filesystem manipulator, libburnia project.
+
+Drive current: -outdev 'stdio:mediator.iso'
+Media current: stdio file, overwriteable
+Media status : is blank
+Media summary: 0 sessions, 0 data blocks, 0 data,  254g free
+Added to ISO image: directory '/'='/tmp/grub.BrWmqB'
+xorriso : UPDATE :    1058 files added in 1 seconds
+Added to ISO image: directory '/'='/home/Dhruv/Documents/Projects/MediatorOS-0.12/mediator/build/iso_root'
+xorriso : UPDATE :    1062 files added in 1 seconds
+xorriso : NOTE : Copying to System Area: 512 bytes from file '/usr/lib/grub/i386-pc/boot_hybrid.img'
+ISO image produced: 15587 sectors
+Written to medium : 15587 sectors at LBA 0
+Writing to 'stdio:mediator.iso' completed successfully.
+
+
+(qemu-system-x86_64:11836): Gtk-WARNING **: 22:34:44.337: Failed to parse /home/Dhruv/.config/gtk-3.0/settings.ini: Key file does not have group “Settings”

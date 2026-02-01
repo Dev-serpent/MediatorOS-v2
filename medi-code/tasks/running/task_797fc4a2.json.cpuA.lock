@@ -1,0 +1,1 @@
+{"task_id": "797fc4a2", "type": "python", "entry": "kernel.py", "args": [10, 20], "env": {"MODE": "FAST"}, "created": 1769883693.9575095}

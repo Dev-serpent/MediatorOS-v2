@@ -1,0 +1,2 @@
+with open('/home/Dhruv/cross-compiler/micropython/ports/i686-elf/startup.c', 'w') as f:
+    f.write('\n// startup.c for i686-elf MicroPython port\n\n// Declare these symbols from the linker script\nextern char _sbss[];\nextern char _ebss[];\nextern int mp_main(void); // MicroPython\'s main function\n\nvoid start(void) {\n    // Clear BSS section\n    char *dest = _sbss;\n    while (dest < _ebss) {\n        *dest++ = 0;\n    }\n\n    // Call MicroPython\'s main function\n    mp_main();\n\n    // If mp_main returns, halt\n    for (;;) {\n        __asm__ ("hlt");\n    }\n}\n')
